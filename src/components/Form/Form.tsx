@@ -25,6 +25,7 @@ const Form = () => {
     const { register, formState: { errors }, handleSubmit } = useForm<IFormInputs>();
     return (
         <Grid>
+            <h2>Form</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <TextField label="name" {...register("name", { required: true })} />
                 {errors.name ? <Alert role='alert' variant="standard">Name is required</Alert> : ''}
